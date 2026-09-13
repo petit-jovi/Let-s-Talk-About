@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-lta-cream text-slate-800 antialiased;
+    }
+}
+
+@layer components {
+    .lta-btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-full bg-lta-button
+               px-6 py-2.5 font-semibold text-white shadow-sm transition
+               hover:bg-lta-button-hover focus:outline-none focus:ring-2
+               focus:ring-lta-secondary focus:ring-offset-2 disabled:cursor-not-allowed
+               disabled:opacity-60;
+    }
+
+    .lta-btn-outline {
+        @apply inline-flex items-center justify-center gap-2 rounded-full border-2
+               border-lta-button px-6 py-2.5 font-semibold text-lta-dark transition
+               hover:bg-lta-button hover:text-white focus:outline-none focus:ring-2
+               focus:ring-lta-secondary focus:ring-offset-2;
+    }
+
+    .lta-btn-danger {
+        @apply inline-flex items-center justify-center gap-2 rounded-full bg-lta-secondary
+               px-6 py-2.5 font-semibold text-white shadow-sm transition
+               hover:bg-lta-primary focus:outline-none focus:ring-2 focus:ring-lta-secondary
+               focus:ring-offset-2;
+    }
+
+    .lta-card {
+        @apply rounded-2xl border border-lta-dark/10 bg-white p-6 shadow-card;
+    }
+
+    .lta-input {
+        @apply w-full rounded-lg border border-slate-300 px-4 py-2.5 text-slate-800
+               shadow-sm transition focus:border-lta-secondary focus:outline-none
+               focus:ring-2 focus:ring-lta-secondary/40;
+    }
+
+    .lta-label {
+        @apply mb-1.5 block text-sm font-medium text-lta-dark;
+    }
+
+    .lta-error {
+        @apply mt-1 text-sm text-lta-secondary;
+    }
+
+    .lta-frame {
+        @apply rounded-xl border-4 border-lta-dark bg-lta-dark p-1.5;
+    }
+
+    .lta-badge {
+        @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold;
+    }
+}
